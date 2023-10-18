@@ -69,7 +69,6 @@ async function run() {
             const result = await addcard.insertOne(req.body);
             res.send(result)
         })
-
         // get all card add data
         app.get('/card/:id', async (req, res) => {
             const data = addcard.find({ email: req.params.id })
