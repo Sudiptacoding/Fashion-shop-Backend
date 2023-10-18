@@ -39,7 +39,6 @@ async function run() {
             const result = await data.toArray()
             res.send(result)
         })
-
         // get single data for mode details page
         app.get('/itemdetails/:id', async (req, res) => {
             const result = await product.findOne({ _id: new ObjectId(req.params.id) })
