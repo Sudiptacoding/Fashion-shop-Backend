@@ -75,7 +75,6 @@ async function run() {
             const result = await data.toArray()
             res.send(result)
         })
-
         // delet card
         app.delete('/card/:id', async (req, res) => {
             const result = await addcard.deleteOne({ _id: new ObjectId(req.params.id) })
